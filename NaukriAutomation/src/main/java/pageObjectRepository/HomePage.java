@@ -19,17 +19,19 @@ public class HomePage
 	 
 	 
 	
-	 
+	@FindBy(how=How.XPATH,using="//div[@class='mTxt' and text()='Login']")
+	
+	WebElement loginbtn;
 	@FindBy(how=How.XPATH,using="//input [@name='email']")
 	
 	WebElement usernametxt;
 	 
-	@FindBy(how=How.XPATH,using="//input [@name='pass']")
+	@FindBy(how=How.XPATH,using="//input [@name='PASSWORD']")
 	
 	WebElement passwodtxt;
 	 
 	
-	@FindBy(how=How.XPATH,using="//input [@id='u_0_a']")
+	@FindBy(how=How.XPATH,using="//button[@type='submit' and text()='Login']")
 	
 	WebElement submitbtn;
 	 
