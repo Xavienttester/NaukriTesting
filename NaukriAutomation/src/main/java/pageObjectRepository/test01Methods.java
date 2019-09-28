@@ -50,7 +50,9 @@ public class test01Methods
 		wb.sendInputTextMethod(home.usernametxt, p.getProperty("user"));
 		wb.sendInputTextMethod(home.passwodtxt, p.getProperty("password"));
 		wb.clickWebElementMethod(driver,home.submitbtn,"click");
-		
+		wb.moveToWebElementMethod(driver,home.jobsTab,home.searchJobslnk);
+		wb.clickWebElementMethod(driver,home.searchJobslnk,"click");
+		Thread.sleep(5000);
 		
 		System.out.println("TEST1");
 		

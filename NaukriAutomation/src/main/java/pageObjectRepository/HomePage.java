@@ -39,6 +39,14 @@ public class HomePage
 	
 	WebElement HomePageIcon;	
 	
+	@FindBy(how=How.XPATH,using="//div[@class='mTxt' and text()='Jobs']")
+	
+	WebElement jobsTab;
+	
+	@FindBy(how=How.XPATH,using="//li/a[@title='Search Jobs' and text()='Search Jobs']")
+	
+	WebElement searchJobslnk;
+	
 
 	 
 	 

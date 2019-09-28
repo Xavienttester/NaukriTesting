@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 
 public class WebDriverCommonLibary
@@ -106,6 +107,14 @@ public class WebDriverCommonLibary
 		}
 
 
+	}
+	public void moveToWebElementMethod(WebDriver driver,WebElement moveTo,WebElement clickToElement) throws Exception
+	{
+		Actions action = new Actions(driver);
+		
+		action.moveToElement(moveTo).moveToElement(clickToElement).click().build().perform();
+		
+		Thread.sleep(5000);
 	}
 }
 
