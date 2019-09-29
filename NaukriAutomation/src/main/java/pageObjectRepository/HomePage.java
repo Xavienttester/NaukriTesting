@@ -47,6 +47,24 @@ public class HomePage
 	
 	WebElement searchJobslnk;
 	
+	@FindBy(how=How.XPATH,using="//input[contains(@id,'qsb-keyskill-sugg')]")
+	
+	WebElement searchinput;
+	@FindBy(how=How.XPATH,using="//button[contains(@type,'submit')]")
+	
+	WebElement searchbtn;
+	@FindBy(how=How.XPATH,using="//input[@class='sdTxt w85' and @placeholder='Last 30 Days']")
+	
+	WebElement freshnessFilter;
+	
+	@FindBy(how=How.XPATH,using="//li[@id='#1']")
+	
+	WebElement freshness1daydrp;
+	
+    @FindBy(how=How.XPATH,using="//div[@class='acord_cont open']/a[contains(text(),'Noida')]")
+	
+	WebElement noidaLocationCkhbox;
+	
 
 	 
 	 

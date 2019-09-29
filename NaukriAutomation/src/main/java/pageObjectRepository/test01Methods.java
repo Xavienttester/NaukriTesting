@@ -18,6 +18,7 @@ public class test01Methods
 {
 	WebDriver driver;
 	WebDriverCommonLibary wb=new WebDriverCommonLibary();
+	Properties p;
 	@BeforeTest
 	public void launchApp()
 	{
@@ -44,17 +45,45 @@ public class test01Methods
 		FileReader reader=new FileReader("testdata.properties");
 		Properties p=new Properties();
 		p.load(reader);
-		HomePage home=PageFactory.initElements(driver, HomePage.class);
+    	HomePage home=PageFactory.initElements(driver, HomePage.class);
 		
 		wb.clickWebElementMethod(driver,home.loginbtn,"click");
 		wb.sendInputTextMethod(home.usernametxt, p.getProperty("user"));
 		wb.sendInputTextMethod(home.passwodtxt, p.getProperty("password"));
 		wb.clickWebElementMethod(driver,home.submitbtn,"click");
-		wb.moveToWebElementMethod(driver,home.jobsTab,home.searchJobslnk);
-		wb.clickWebElementMethod(driver,home.searchJobslnk,"click");
-		Thread.sleep(5000);
+		
 		
 		System.out.println("TEST1");
+		
+	}
+	@Test
+	public void searchJobwithRequiredFilter() throws Exception
+	{
+		FileReader reader=new FileReader("testdata.properties");
+		Properties p=new Properties();
+		p.load(reader);
+		HomePage home=PageFactory.initElements(driver, HomePage.class);
+		wb.moveToWebElementMethod(driver,home.jobsTab,home.searchJobslnk);
+		wb.clickWebElementMethod(driver,home.searchJobslnk,"click");
+		Thread.sleep(15000);
+		String parentWindow=driver.getWindowHandle();
+		Set<String> child=driver.getWindowHandles();
+		for(String abc:child)
+		{
+			if(!parentWindow.equalsIgnoreCase(abc))
+			{
+				driver.switchTo().window(abc);
+				Thread.sleep(5000);
+				wb.sendInputTextMethod(home.searchinput,p.getProperty("searchedValue"));
+				wb.clickWebElementMethod(driver,home.searchbtn,"click");
+				wb.clickWebElementMethod(driver,home.freshnessFilter,"click");
+				wb.clickWebElementMethod(driver,home.freshness1daydrp,"click");
+				wb.clickWebElementMethod(driver,home.noidaLocationCkhbox,"click");
+			
+			}
+		}
+		
+
 		
 	}
 	@AfterTest

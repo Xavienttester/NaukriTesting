@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="76878" started-at="2019-09-29T08:31:23Z" finished-at="2019-09-29T08:32:40Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="76878" started-at="2019-09-29T08:31:23Z" finished-at="2019-09-29T08:32:40Z">
+      <class name="pageObjectRepository.test01Methods">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:pageObjectRepository.test01Methods@47c62251]" name="launchApp" is-config="true" duration-ms="12162" started-at="2019-09-29T08:31:23Z" finished-at="2019-09-29T08:31:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method status="PASS" signature="loginWebApp()[pri:0, instance:pageObjectRepository.test01Methods@47c62251]" name="loginWebApp" duration-ms="8830" started-at="2019-09-29T08:31:35Z" finished-at="2019-09-29T08:31:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWebApp -->
+        <test-method status="PASS" signature="searchJobwithRequiredFilter()[pri:0, instance:pageObjectRepository.test01Methods@47c62251]" name="searchJobwithRequiredFilter" duration-ms="55181" started-at="2019-09-29T08:31:44Z" finished-at="2019-09-29T08:32:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchJobwithRequiredFilter -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:pageObjectRepository.test01Methods@47c62251]" name="logout" is-config="true" duration-ms="671" started-at="2019-09-29T08:32:39Z" finished-at="2019-09-29T08:32:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- pageObjectRepository.test01Methods -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
